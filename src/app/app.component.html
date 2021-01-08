@@ -1,0 +1,20 @@
+<!-- <router-outlet></router-outlet> -->
+
+<app-pdfviewer *ngIf="type==='scroll'"></app-pdfviewer>
+<pdfwithpage *ngIf="type==='page'"></pdfwithpage>
+
+
+<!-- <div class="form-check">
+  <label for="scroll">
+    Scroll
+  </label>
+  <input class="form-check-input position-static" type="radio" [(ngModel)]="type" name="pagetype" id="scroll" value="scroll" aria-label="...">
+</div>
+<div class="form-check">
+  <label for="page">
+    Page
+  </label>
+  <input class="form-check-input position-static" type="radio" [(ngModel)]="type" name="pagetype" id="page" value="page" aria-label="...">
+</div> -->
+
+<button class="btn btn-primary" (click)="change(type)">{{type=='page'?'Page':'Scroll'}}</button>

@@ -1,0 +1,9 @@
+
+<canvas height="800" width="612" #pageCanvas></canvas>
+<div class="control">
+    <button id="prev" class="btn pull-left" (click)="onPrevPage()">Previous</button>
+
+    <span><input type="text" style="width: 20px;" [(ngModel)]="pageNum" (change)="onChange()"/> / <span
+            id="page_count" >{{pdfDoc?.numPages}}</span></span>
+    <button id="next" class="btn pull-right" (click)="onNextPage()">Next</button>
+</div>

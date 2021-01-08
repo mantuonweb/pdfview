@@ -1,0 +1,14 @@
+<!-- <div class="control">
+    <button id="prev" class="btn pull-left" (click)="onPrevPage()">Previous</button>
+
+    <span><input type="text" style="width: 20px;" [(ngModel)]="pageNum" (change)="onChange()"/> / <span
+            id="page_count" >{{pdfDoc?.numPages}}</span></span>
+    <button id="next" class="btn pull-right" (click)="onNextPage()">Next</button>
+</div> -->
+
+
+<ng-container *ngIf="pdfDoc">
+    <div style="height: 800px; overflow-y: scroll;">
+        <pdfpage [page]="ind" [pdf]="pdfDoc" *ngFor="let item of pageArray;let ind=index"></pdfpage>
+    </div>
+</ng-container>
